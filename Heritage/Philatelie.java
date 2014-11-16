@@ -57,6 +57,10 @@ class Timbre {
                 "ayant pour valeur faciale "+ valeurFaciale +" francs";
     }
 
+    public int age() {
+        return ANNEE_COURANTE - anneeEmission;
+    }
+
 
 }
 	
