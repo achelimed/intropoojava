@@ -1,6 +1,8 @@
 /*******************************************
  * Completez le programme a partir d'ici.
  *******************************************/
+import java.util.ArrayList;
+
 class Piece {
     private String nom; 
 
@@ -41,6 +43,53 @@ class Simple extends Piece {
         }
         return ressult;
 
+    }
+}
+
+class Composee extends Piece {
+    private int tailleMax;
+    private ArrayList<Piece> listePieces;
+
+    public Composee(String unNom, int max) {
+        super(unNom);
+        tailleMax = max;
+        listePieces = new ArrayList<Piece>(max);
+    }
+
+    public int taille() {
+        if (listePieces != null) {
+            return listePieces.size();    
+        } else {
+            return 0;
+        }
+        
+    }
+
+    public int tailleMax() {
+        return tailleMax;
+    } 
+
+    public void construire(Piece unePiece) {
+        if (listePieces.size() < tailleMax) {
+            listePieces.add(unePiece);
+        } else {
+            System.out.println("Construction impossible");
+        }
+    }
+
+    public String toString() {
+        String ressult = super.getNom();
+        for (int i = 0; i < listePieces.size(); i++) {
+            if (i == 0) {
+                 ressult += "(" + listePieces.get(i);
+            } else {
+                ressult += ", " + listePieces.get(i);
+            } 
+            if (i == listePieces.size() - 1) {
+                ressult += ")";
+            }
+        }
+        return ressult;
     }
 }
 
