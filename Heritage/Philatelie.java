@@ -119,6 +119,29 @@ class Rare extends Timbre {
 
 }
 
+class Commemoratif extends Timbre {
+
+    public Commemoratif(String unCode, int uneAnneeEmission, String unPaysOrigine, double uneValeurFaciale) {
+        super(unCode, uneAnneeEmission, unPaysOrigine, uneValeurFaciale);
+    }
+
+    public Commemoratif(String unCode, int uneAnneeEmission, String unPaysOrigine) {
+        super(unCode, uneAnneeEmission, unPaysOrigine);
+    }
+
+    public Commemoratif(String unCode, int uneAnneeEmission) {
+        super(unCode, uneAnneeEmission);
+    }
+
+    public Commemoratif(String unCode) {
+        super(unCode);
+    }
+
+    public Commemoratif() {
+        super();
+    }
+
+}
 	
 /*******************************************
  * Ne rien modifier apres cette ligne.
