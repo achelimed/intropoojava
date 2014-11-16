@@ -44,6 +44,14 @@ class Timbre {
         this(CODE_DEFAUT, ANNEE_COURANTE, PAYS_DEFAUT, VALEUR_TIMBRE_DEFAUT);
     }
 
+    public double vente() {
+        if (age() <= 5) {
+            return valeurFaciale;
+        } else {
+            return valeurFaciale * age() * 2.5;
+        }
+    }
+
 }
 	
 /*******************************************
