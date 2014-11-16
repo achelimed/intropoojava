@@ -61,7 +61,10 @@ class Timbre {
         return ANNEE_COURANTE - anneeEmission;
     }
 
-
+    public String getCode() { return code; }
+    public int getAnnee() { return anneeEmission; }
+    public String getPays() { return paysOrigine; }
+    public double getValeurFaciale() { return valeurFaciale; }
 }
 	
 /*******************************************
