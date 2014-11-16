@@ -66,6 +66,37 @@ class Timbre {
     public String getPays() { return paysOrigine; }
     public double getValeurFaciale() { return valeurFaciale; }
 }
+
+class Rare extends Timbre {
+    private int exemplaires;
+    
+    public Rare(int nombre) {
+        super();
+        exemplaires = nombre;
+    }
+
+    public Rare(String unCode, int uneAnneeEmission, String unPaysOrigine, double uneValeurFaciale, int nbEx) {
+        super(unCode, uneAnneeEmission, unPaysOrigine, uneValeurFaciale);
+        exemplaires = nbEx;
+    }
+
+    public Rare(String unCode, int uneAnneeEmission, String unPaysOrigine, int nbEx) {
+        super(unCode, uneAnneeEmission, unPaysOrigine);
+        exemplaires = nbEx;
+    }
+
+    public Rare(String unCode, int uneAnneeEmission, int nbEx) {
+        super(unCode, uneAnneeEmission);
+        exemplaires = nbEx;
+    }
+
+    public Rare(String unCode, int nbEx) {
+        super(unCode);
+        exemplaires = nbEx;
+    }
+
+}
+
 	
 /*******************************************
  * Ne rien modifier apres cette ligne.
