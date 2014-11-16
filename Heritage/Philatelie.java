@@ -145,6 +145,9 @@ class Commemoratif extends Timbre {
         return super.toString() + "\nTimbre celebrant un evenement";
     }
 
+    public double vente() {
+        return super.vente() * 2;
+    }
 }
 	
 /*******************************************
