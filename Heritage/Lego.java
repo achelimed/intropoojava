@@ -17,6 +17,33 @@ class Piece {
     }
 }
 
+class Simple extends Piece {
+    private String orientation;
+    
+    public Simple(String unNom, String uneOrientation) {
+        super(unNom);
+        orientation = uneOrientation;
+    }
+
+    public Simple(String unNom) {
+        super(unNom);
+        orientation = "aucune";
+    }
+
+    public String getOrientation() {
+        return orientation;
+    }
+
+    public String toString() {
+        String ressult = super.toString();
+        if (!orientation.equals("aucune")) {
+            ressult += " ["+ orientation +"]"; 
+        }
+        return ressult;
+
+    }
+}
+
 /*******************************************
  * Ne rien modifier apres cette ligne.
  *******************************************/
