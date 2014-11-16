@@ -16,6 +16,34 @@ class Timbre {
     /*******************************************
      * Completez le programme a partir d'ici.
      *******************************************/
+    private String code;
+    private int anneeEmission;
+    private String paysOrigine;
+    private double valeurFaciale;
+
+    public Timbre(String unCode, int uneAnneeEmission, String unPaysOrigine, double uneValeurFaciale) {
+        code = unCode;
+        anneeEmission = uneAnneeEmission;
+        paysOrigine = unPaysOrigine;
+        valeurFaciale = uneValeurFaciale;
+    }
+
+    public Timbre(String unCode, int uneAnneeEmission, String unPaysOrigine) {
+        this(unCode, uneAnneeEmission, unPaysOrigine, VALEUR_TIMBRE_DEFAUT);
+    }
+
+    public Timbre(String unCode, int uneAnneeEmission) {
+        this(unCode, uneAnneeEmission, PAYS_DEFAUT, VALEUR_TIMBRE_DEFAUT);
+    }
+
+    public Timbre(String unCode) {
+        this(unCode, ANNEE_COURANTE, PAYS_DEFAUT, VALEUR_TIMBRE_DEFAUT);
+    }
+
+    public Timbre() {
+        this(CODE_DEFAUT, ANNEE_COURANTE, PAYS_DEFAUT, VALEUR_TIMBRE_DEFAUT);
+    }
+
 }
 	
 /*******************************************
