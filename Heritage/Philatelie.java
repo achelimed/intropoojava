@@ -95,6 +95,10 @@ class Rare extends Timbre {
         exemplaires = nbEx;
     }
 
+    public int getExemplaires() { 
+        return exemplaires; 
+    }
+
 }
 
 	
