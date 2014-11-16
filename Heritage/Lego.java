@@ -93,6 +93,24 @@ class Composee extends Piece {
     }
 }
 
+class Composant {
+    private Piece piece;
+    private int quantite;
+
+    public Composant(Piece unePiece, int uneQuantite) {
+        piece = unePiece;
+        quantite = uneQuantite;
+    }
+
+    public Piece getPiece() {
+        return piece;
+    }
+
+    public int getQuantite() {
+        return quantite;
+    }
+}
+
 /*******************************************
  * Ne rien modifier apres cette ligne.
  *******************************************/
