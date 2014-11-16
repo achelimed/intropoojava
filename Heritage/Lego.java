@@ -1,6 +1,21 @@
 /*******************************************
  * Completez le programme a partir d'ici.
  *******************************************/
+class Piece {
+    private String nom; 
+
+    public Piece(String unNom) {
+        nom = unNom;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String toString() {
+        return nom;
+    }
+}
 
 /*******************************************
  * Ne rien modifier apres cette ligne.
