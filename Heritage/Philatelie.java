@@ -99,6 +99,10 @@ class Rare extends Timbre {
         return exemplaires; 
     }
 
+    public String toString() {
+        return super.toString() + "\nNombre d'exemplaires -> " + exemplaires;
+    }
+
 }
 
 	
