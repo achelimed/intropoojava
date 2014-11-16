@@ -141,6 +141,10 @@ class Commemoratif extends Timbre {
         super();
     }
 
+    public String toString() {
+        return super.toString() + "\nTimbre celebrant un evenement";
+    }
+
 }
 	
 /*******************************************
