@@ -111,6 +111,40 @@ class Composant {
     }
 }
 
+class Construction {
+    private int tailleMax;
+    private ArrayList<Composant> composants;
+
+    public Construction(int uneTailleMax) {
+        tailleMax = uneTailleMax;
+        composants = new ArrayList<Composant>(uneTailleMax);
+    }
+
+    public int taille() {
+        return composants.size();
+    }
+
+    public int tailleMax() {
+        return tailleMax;
+    }
+
+    public void ajouterComposant(Piece unePiece, int uneQuantite) {
+        if (composants.size() < tailleMax) {
+            composants.add(new Composant(unePiece, uneQuantite));
+        } else {
+            System.out.println("Ajout de composant impossible");
+        }
+    }
+
+    public String toString() {
+        String ressult = "";
+        for (int i = 0; i < composants.size(); i++) {
+            Composant composant = composants.get(i);
+            ressult += composant.getPiece() + " (quantite "+ composant.getQuantite() +")\n" ;
+        }
+        return  ressult;
+    }
+}
 /*******************************************
  * Ne rien modifier apres cette ligne.
  *******************************************/
