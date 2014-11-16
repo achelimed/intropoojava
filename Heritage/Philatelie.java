@@ -103,6 +103,20 @@ class Rare extends Timbre {
         return super.toString() + "\nNombre d'exemplaires -> " + exemplaires;
     }
 
+    public double vente() {
+        double prixBase;
+        if (exemplaires < BASE_1_EXEMPLAIRES) {
+            prixBase = PRIX_BASE_1;
+        } else {
+            if (exemplaires < BASE_2_EXEMPLAIRES) {
+                prixBase = PRIX_BASE_2;
+            } else {
+                prixBase = PRIX_BASE_3;
+            }
+        }
+        return prixBase * age() / 10;
+    }
+
 }
 
 	
