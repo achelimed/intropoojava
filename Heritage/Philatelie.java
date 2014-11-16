@@ -52,6 +52,12 @@ class Timbre {
         }
     }
 
+    public String toString() {
+        return "Timbre de code "+ code +" datant de "+ anneeEmission +" (provenance "+ paysOrigine +") " +
+                "ayant pour valeur faciale "+ valeurFaciale +" francs";
+    }
+
+
 }
 	
 /*******************************************
